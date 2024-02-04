@@ -55,14 +55,25 @@ $("#passwod_change").click(function(event){
 });
  // shopping cart
  $("#cart-item").click(function(){
-  $("#cart1").hide();
+  $(".cart").hide();
 });
+
 // shopping cart cal
 $("#product_qty").click(function(){
   const product_price= $("#product_price").text();
   const product_qty=$("#product_qty").val();
   const total=product_qty * product_price;
-  $("#total").text(total);
+  $("#total").text("$"+total);
+  $("#total").css({ "color": "#28a8af", "font-size": "16px", "font-weight": "500" });
+  $("#total").css("fontweight","bold")
+  $(".subprice").text("$"+total);
+  const subprice =$(".subprice").text();
+  const shipping_charge = $("#shipping_charge").text();
+  
+  const total_fullcharge = subprice + shipping_charge;
+  
+  $("#total_fullcharge").text(total_fullcharge);
+
  });
 
 // checkout

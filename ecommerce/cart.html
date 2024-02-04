@@ -486,7 +486,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr id="cart1">
+                      <tr class="cart">
                         
                         <td>
                           <a href="product-page.html">
@@ -503,7 +503,7 @@
                         
                         <td id="product_price">
                           <div class="base-price price-box"> 
-                           <span class="price">520.00</span> 
+                          <span class="price">520.00</span> 
                           </div>
                         </td>
                         <td>
@@ -522,7 +522,7 @@
                         <td id="total">
                         
                             <div class="total-price price-box"> 
-                             <span class="price" id="total">520.00</span> 
+                            <span class="price" id="total">520.00</span> 
                             </div>
                          
                         </td>
@@ -530,6 +530,7 @@
                           <i title="Remove Item From Cart" id="cart-item" data-id="100" class="fa fa-trash cart-remove-item"></i>
                         </td>
                       </tr>
+                     
                     </tbody>
                   </table>  
                 </div>
@@ -612,8 +613,9 @@
                         <tr>
                           <td>Item(s) Subtotal</td>
                           <td>
-                            <div class="price-box"> 
-                              <span class="price">$160.00</span> 
+                            <div> 
+                              <span  class="price subprice"></span> 
+                             
                             </div>
                           </td>
                         </tr>
@@ -621,7 +623,7 @@
                           <td>Shipping</td>
                           <td>
                             <div class="price-box"> 
-                              <span class="price">$0.00</span> 
+                           <span class="price" id="shipping_charge">30.00</span> 
                             </div>
                           </td>
                         </tr>
@@ -629,7 +631,7 @@
                           <td><b>Amount Payable</b></td>
                           <td>
                             <div class="price-box"> 
-                              <span class="price"><b>$160.00</b></span> 
+                              <span class="price" id="total_fullcharge"></span> 
                             </div>
                           </td>
                         </tr>
