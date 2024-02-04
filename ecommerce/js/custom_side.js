@@ -58,12 +58,13 @@ $("#passwod_change").click(function(event){
   $("#cart1").hide();
 });
 // shopping cart cal
-$(".quantity_cart").click(function(){
-  const price = parseFloat($(".price").val());
-  const quantity_cart = parseFloat($(".quantity_cart").val());
-  const total_price = price * quantity_cart;
+$("#product_qty").click(function(){
+  const product_price= $("#product_price").text();
+  const product_qty=$("#product_qty").val();
+  const total=product_qty * product_price;
   $("#total").text(total);
-});
+ });
+
 // checkout
 $(".shipping_content").click(function(){
   $("#shipping_content").show();
