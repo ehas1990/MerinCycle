@@ -665,19 +665,17 @@
                         <td>
                           
                           <div class="input-box select-dropdown">
-                            <!-- <fieldset>
+                            <fieldset>
                               <select data-id="100" class=" option-drop1" name="quantity_cart"  id="product_qty">
                                 <option selected="" value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                               </select>
-                            </fieldset> -->
-                            <div class="custom-qty">
-                              <button onclick="var result = document.getElementById('cus_qty1'); var qty1 = result.value; if( !isNaN( qty1 ) &amp;&amp; qty1 &gt; 1 ) result.value--;return false;" class="reduced items" type="button"> <i class="fa fa-minus"></i> </button>
-                              <input type="text" class="input-text qty" title="Qty" value="1" maxlength="8" id="qty1" name="qty">
-                              <button onclick="var result = document.getElementById('cus_qty1'); var qty1 = result.value; if( !isNaN( qty1 )) result.value++;return false;" class="increase items" type="button"> <i class="fa fa-plus"></i> </button>
-                            </div>
+                            </fieldset>
+                            <span class="qt-minus">-</span>
+                            <span class="qt">2</span>
+                            <span class="qt-plus">+</span>
                           </div>
                         </td>
                         <td id="total">
