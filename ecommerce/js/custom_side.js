@@ -59,23 +59,38 @@ $("#passwod_change").click(function(event){
 });
 
 // shopping cart cal
-$("#product_qty").click(function(){
-  const product_price= $("#product_price").text();
-  const product_qty=$("#product_qty").val();
-  const total=product_qty * product_price;
-  $("#total").text("$"+total);
-  $("#total").css({ "color": "#28a8af", "font-size": "16px", "font-weight": "500" });
-  $("#total").css("fontweight","bold")
-  $(".subprice").text("$"+total);
-  const subprice =$(".subprice").text();
-  const shipping_charge = $("#shipping_charge").text();
-  
-  const total_fullcharge = subprice + shipping_charge;
-  
-  $("#total_fullcharge").text(total_fullcharge);
 
- });
+  $(document).ready(function() {
+    // Function to calculate subtotal for each item
+    function calculateSubtotal() {
+        // Get the price and quantity values
+        var price = parseFloat($('.price[data-value]').data('value'));
+        var quantity = parseInt($('#product_qty').val());
 
+        // Calculate subtotal
+        var subtotal = price * quantity;
+
+        // Display the subtotal
+        $('#total').text(' ₹'+subtotal);
+        $('.subprice').text(' ₹'+subtotal);
+        $('#total').css({color: '#28a8af', fontSize: '16px',fontWeight:'500'});
+        $('.subprice').css({color: '#222', fontSize: '16px',fontWeight:'500'});
+       const shipping_charge = parseFloat($("#shipping_charge").data('value'));
+      //  const subprice= parseFloat($(".subprice").text());
+      const total_fullcharge= (shipping_charge) +( subtotal);  
+      $("#total_fullcharge_display").text(' ₹'+total_fullcharge);
+    
+    }
+
+    // Call the function initially
+    calculateSubtotal();
+
+    // Add event listener to quantity input for dynamic calculation
+    $('#product_qty').change(calculateSubtotal);
+});
+
+
+ 
 // checkout
 $(".shipping_content").click(function(){
   $("#shipping_content").show();
@@ -124,6 +139,40 @@ $(".order_complete_content").click(function(){
 $(".cart-remove-item").click(function(){
   $("#order_1").hide();
 });
+$("#order_next1").click(function(){
+  $("#order_overview_content").show();
+  $("#shipping_content").hide();
+  $("#payment_content").hide();
+  $("#order_complete_content").hide();
+  $("#li_0").removeClass("active")
+  $("#li_1").addClass("active")
+  $("#li_2").removeClass("active")
+  $("#li_3").removeClass("active")
+  $("#li_4").removeClass("active")
+  
+});
+$("#order_next2").click(function(){
+  $("#payment_content").show();
+  $("#order_overview_content").hide();
+  $("#shipping_content").hide();
+  $("#order_complete_content").hide();
+  $("#li_0").removeClass("active")
+  $("#li_1").removeClass("active")
+  $("#li_2").addClass("active")
+  $("#li_3").removeClass("active")
+  $("#li_4").removeClass("active")
+});
+$("#order_next3").click(function(){
+  $("#order_complete_content").show();
+  $("#shipping_content").hide();
+  $("#payment_content").hide();
+  $("#order_overview_content").hide();
+  $("#li_0").removeClass("active")
+  $("#li_1").removeClass("active")
+  $("#li_2").removeClass("active")
+  $("#li_3").addClass("active")
+  $("#li_4").addClass("active")
+})
 // Pagination
 var itemsPerPage = 8; // Define how many items you want to display per page
 var $items = $('.item-width'); // Select all elements with the item-width class
