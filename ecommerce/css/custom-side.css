@@ -99,12 +99,14 @@
     height: 2.5rem;
     width: 2.5rem;
     border-radius:100%;
-    background: #686868;
+    background: #d32821;
+    color:#ffffff;
   }
   
   .pagination-number:hover,
   .pagination-button:not(.disabled):hover {
-    background: #28A8C1;
+    background: #154494;
+    color:#ffffff;
   }
   
   .pagination-number.active {
@@ -137,5 +139,33 @@
   }
   .active
   {
-   color: #28a8af !important;
+   color: #d32821 !important;
   }
+  .quality_value {
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    width: 44px;
+    padding: 5px 0;
+    float: left;
+    text-align: center;
+    margin: 0 5px;
+}
+.navbar-brand > img
+{
+  width: 40%;
+}
+.level a
+{
+ color: #ffffff;
+}
+.detail-inner-left ul li a
+{
+  color:#154494 !important;
+}
+.pro-wishlist-icon:hover
+{
+  background-color:#154494 !important;
+}
