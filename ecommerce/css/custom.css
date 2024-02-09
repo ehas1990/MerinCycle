@@ -95,10 +95,20 @@ body.dark-header {
 	position: fixed;
 	left: 0px;
 	top: 0px;
-	width: 100%;
-	height: 100%;
+	width:100%;
+	height:100%;
 	z-index: 9999;
-	background: url(../images/Preloader_2.gif) center no-repeat #fff;
+	background: url(../images/logo.png) no-repeat #154494;
+	background-position: right;
+	background-size:20%;
+	animation: cycleride;
+	transition:linear 10s;
+	animation-duration:10s;
+	
+}
+@keyframes cycleride {
+	0%{background-position:right;transition: background-position 10s;}
+	100%{background-position: left;transition: background-position 10s;}
 }
 .main {
 	position: relative;

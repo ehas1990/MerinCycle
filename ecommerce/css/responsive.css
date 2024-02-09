@@ -1052,7 +1052,7 @@ header#header {
 }
 
 .navbar-brand > img {
-    height: 40px;
+    height:40%;
 }
 
 .navbar-header .navbar-brand {
@@ -2761,7 +2761,7 @@ ul.social-icon li i.fa, ul.social-icon li i.fab {
 /* Header */
 
 .navbar-brand > img {
-    height: 30px;
+    height:40%;
 }
 
 .header-right-link > ul > li > a {
