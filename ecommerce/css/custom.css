@@ -5931,4 +5931,11 @@ ul.tagcloud li a:hover {
 	-webkit-border-radius: 50%;
 	-o-border-radius: 50%;
 }
-/* Scroll-top Arrow CSS End */
+/* instagram */
+.fa-instagram:hover
+{
+	background-color: #C43C81;
+}
+#insta:hover{
+	background-color: #C43C81;
+}

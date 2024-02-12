@@ -18,7 +18,9 @@
   <meta name="GOOGLEBOT" content="NOARCHIVE">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
- 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/custom_side.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/custom-side.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -715,20 +717,19 @@
                         <td>
                           <ul>
                             <li>
-                              <div class="base-price price-box"> <span class="price">$520.00</span> </div>
+                              <div class="base-price price-box"> <span class="price"  data-value="520">$520.00</span> </div>
                             </li>
                           </ul>
                         </td>
                         <td>
-                          <div class="input-box select-dropdown">
-                            <fieldset>
-                              <select data-id="100" class="quantity_cart option-drop" name="quantity_cart">
-                                <option selected="" value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                            </fieldset>
+                         
+                            <div class="custom-qty">
+                              <button  class="reduced items" id="wishlist_quality_minus" type="button"> <i class="fa fa-minus"></i> </button>
+                              <span class="wishlist_quality_value"  data-value="1">1</span>
+                              
+                              <button  class="increase items" id="wishlist_quality_plus" type="button"> <i class="fa fa-plus"></i> </button>
+                            </div>
+                          
                           </div>
                         </td>
                         <td>
@@ -738,54 +739,12 @@
                         </td>
                         <td>
                           <a href="cart.html">
-                            <i title="Shopping Cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <i title="Shopping Cart" class="fa fa-1x fa-shopping-cart text-danger"></i>
                           </a> 
-                          <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
+                          <a class="ml-2"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a> 
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                          <a href="product-page.html">
-                            <div class="product-image"><img alt="Stylexpo" src="images/2.jpg"></div>
-                          </a>
-                        </td>
-                        <td>
-                         <div class="product-title"> 
-                            <a href="product-page.html">Defyant Reversible Dot Shorts</a>
-                            <div class="size-text">SIZE:large  <br> <span>PRODUCT ID:0088746</span></div> 
-                          </div>
-                        </td>
-                        <td>
-                          <ul>
-                            <li>
-                              <div class="base-price price-box"> <span class="price">$520.00</span> </div>
-                            </li>
-                          </ul>
-                        </td>
-                        <td>
-                          <div class="input-box select-dropdown">
-                            <fieldset>
-                              <select data-id="100" class="quantity_cart option-drop" name="quantity_cart">
-                                <option selected="" value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select>
-                            </fieldset>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="total-price price-box"> 
-                            <span class="price">In Stock</span> 
-                          </div>
-                        </td>
-                        <td>
-                          <a href="cart.html">
-                            <i title="Shopping Cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
-                          </a>  
-                          <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
-                        </td>
-                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
@@ -811,66 +770,41 @@
           <div class="footer-inner">
             <div class="footer-middle">
               <div class="row">
-                <div class="col-xl-3 f-col">
+                <div class="col-xl-4 f-col">
                   <div class="footer-static-block"> <span class="opener plus"></span>
                     <h3 class="title">address<span></span></h3>
                     <ul class="footer-block-contant address-footer">
                       <li class="item"> <i class="fa fa-home"> </i>
-                        <p>150-A Appolo aprtment, Opp. Hopewell Junction, <br>Allenst Road,Allen st Road, <br>new york-405001.</p>
+                        <p>AS Cycles<br>Ambanakulangara, Mannanchery P.O<br>Alappuzha-688538</p>
                       </li>
                       <li class="item"> <i class="fa fa-envelope"> </i>
-                        <p> <a href="javascript:void(0)">infoservices@roadie.com </a> </p>
+                        <p> <a href="javascript:void(0)">info@ascycles.com </a> </p>
                       </li>
                       <li class="item"> <i class="fa fa-phone"> </i>
-                        <p>+91 9645111122 / +91 8086197677</p>
+                        <p>+91 9645111122 / +91 8714242777</p>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div class="col-xl-6 footer-center">
+                <div class="col-xl-4 footer-center">
                   <div class="row">
-                    <div class="col-xl-4 f-col">
+                    
+                    <div class="col-xl-12 f-col">
                       <div class="footer-static-block"> <span class="opener plus"></span>
-                        <h3 class="title">Help <span></span></h3>
+                        <h3 class="title">Quick Link <span></span></h3>
                         <ul class="footer-block-contant link">
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Gift Cards</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Order Status</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Free Shipping</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Customer</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Return & Exchange </a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>International</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 f-col">
-                      <div class="footer-static-block"> <span class="opener plus"></span>
-                        <h3 class="title">Guidance <span></span></h3>
-                        <ul class="footer-block-contant link">
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Delivery information</a></li>
+                          <li><a href="about-3.html"><i class="fa fa-angle-right"></i>About</a></li>
+                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Shipping & Delivery</a></li>
                           <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Privacy Policy</a></li>
                           <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Terms & Conditions</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Gift Cards</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Contact</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Sitemap</a></li>
+                         
                         </ul>
                       </div>
                     </div>
-                    <div class="col-xl-4 f-col">
-                      <div class="footer-static-block"> <span class="opener plus"></span>
-                        <h3 class="title">Information <span></span></h3>
-                        <ul class="footer-block-contant link">
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>About Us</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Customer</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Directory</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Coupons Vouchers</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Online Help</a></li>
-                          <li><a href="javascript:void(0)"><i class="fa fa-angle-right"></i>Gift Cards</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                   
                   </div>
                 </div>
-                <div class="col-xl-3 f-col footer-about">
+                <div class="col-xl-4 f-col footer-about">
                   <div class="footer-static-block"> <span class="opener plus"></span>
                     <h3 class="title">Contact Us <span></span></h3>
                     <div class="footer-block-contant">
@@ -900,11 +834,11 @@
                   <div class="footer_social mb-sm-30 center-sm">
                     <ul class="social-icon">
                       <li><div class="title">Follow us on :</div></li>
-                      <li><a title="Facebook" class="facebook"><i class="fa fa-facebook"> </i></a></li>
-                      <li><a title="Twitter" class="twitter"><i class="fa fa-twitter"> </i></a></li>
-                      <li><a title="Linkedin" class="linkedin"><i class="fa fa-linkedin"> </i></a></li>
+                      <li><a title="Facebook" href="https://www.facebook.com/people/As-cycles/61555996892945/" class="facebook"><i class="fa fa-facebook"> </i></a></li>
+                      <li><a title="instagram" href="https://www.instagram.com/as_cycles_5/" class="instagram"><i class="fa fa-instagram" id="insta"> </i></a></li>
+                      <!-- <li><a title="Linkedin" class="linkedin"><i class="fa fa-linkedin"> </i></a></li>
                       <li><a title="RSS" class="rss"><i class="fa fa-rss"> </i></a></li>
-                      <li><a title="Pinterest" class="pinterest"><i class="fa fa-pinterest"> </i></a></li>
+                      <li><a title="Pinterest" class="pinterest"><i class="fa fa-pinterest"> </i></a></li> -->
                     </ul>
                   </div>
                 </div>
@@ -926,7 +860,7 @@
         <div class="copy-right-bg">
           <div class="container">
             <div class="row  align-center">
-              <div class="col-12 mb-30">
+              <!-- <div class="col-12 mb-30">
                 <div class="site-link">
                   <ul>
                     <li><a href="javascript:void(0)">About Us</a>/</li>
@@ -939,7 +873,7 @@
                     <li><a href="javascript:void(0)">Directory </a></li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
               <div class="col-12">
                 <div class="">
                   <div class="copy-right ">© 2024 All Rights Reserved. Design By  <a href="javascript:void(0)">A2Z Alphabet Solutionz PVT LTD</a></div>

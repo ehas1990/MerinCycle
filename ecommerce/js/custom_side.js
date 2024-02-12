@@ -211,6 +211,17 @@ $(document).ready(function () {
     $("#li_3").addClass("active");
     $("#li_4").addClass("active");
   });
+  // whishlist
+  var wishlist_quality_value =parseFloat( $(".wishlist_quality_value").data("value"));
+  var price = parseFloat($(".price[data-value]").data("value"));
+  $("#wishlist_quality_plus").click(function(){
+    wishlist_quality_value = wishlist_quality_value + 1;
+    $(".wishlist_quality_value").text(wishlist_quality_value);
+  });
+  $("#wishlist_quality_minus").click(function(){
+    wishlist_quality_value = wishlist_quality_value - 1;
+    $(".wishlist_quality_value").text(wishlist_quality_value);
+  });
   // Pagination
   var itemsPerPage = 8; // Define how many items you want to display per page
   var $items = $(".item-width"); // Select all elements with the item-width class
